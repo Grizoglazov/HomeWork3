@@ -4,29 +4,31 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.WriteLine("Введите число: ");
+Console.WriteLine("Введите число: ");                   
 int number = Convert.ToInt32(Console.ReadLine());
-if (number > 9999 && number <= 99999)
+if (number > 9999 && number <= 99999)                   // условие задачи пятизначное число
 {
-    int digit = number / 10000;
-    int balance = number % 10;
-    if (digit == balance)
+    int digit = number / 10000;                         // выявляем первый разряд из 5-ти значного числа
+    int balance = number % 10;                          // выявлеям последний разряд из 5-ти значного числа
+    if (digit == balance)                               // первая проверка на палиндром
     {
-        int digit2 = number;
-        digit2%=10000;
-        digit2 /=1000;
-        int balance2 = digit2;
-        balance2%=100;
-        balance2 /=10; 
-        if (digit2 == balance2)
-        {
-             Console.WriteLine("Число {} является палиндромом", number);
-        }
+        int digit2 = number%10000;                      // находим остаток чтобы приблизится ко второму разряду из 5-ти значного числа
+        int A = digit2 / 1000;                          // выявляем само число
+        int balance2 = number%100;                      // находим остаток чтобы приблизится к предпоследнему разряду из 5-ти значного числа
+        int B = balance2 /10;                           // находим само число
+        if (A == B)                                     // вторая проверка на палиндром
+            {
+                Console.WriteLine("Число {0} является палиндромом", number); // условие задачи выполнено
+            }
         else
-        Console.WriteLine("Число {} не является палиндромом", number);
+        Console.WriteLine("Число {0} не является палиндромом", number);     // не соответствует условию задачи
     }
     else
-    Console.WriteLine("Число {} не является палиндромом", number);
+    Console.WriteLine("Число {0} не является палиндромом", number);     // не соответствует условию задачи            
+
 }
 else
-Console.WriteLine("Введите пятизначное чило!!");
+Console.WriteLine("Введите пятизначное чило!!");                        // не соответствует условию задачи
+
+
+
