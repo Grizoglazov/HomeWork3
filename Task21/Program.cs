@@ -10,18 +10,18 @@ A (7,-5, 0); B (1,-1,9) -> 11.53*/
 // S = Math.Round(S,2);
 // Console.WriteLine("Расстояние между точками А и В равно:{0}", S);
 
-Console.WriteLine("Введите координаты для точки А: х=");
+Console.WriteLine("Введите координаты для точки А: х=");        // вводим координату Х для точки А
 int Ax = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координаты для точки А: y=");
+Console.WriteLine("Введите координаты для точки А: y=");        // вводим координату У для точки А
 int Ay = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координаты для точки А: z=");
+Console.WriteLine("Введите координаты для точки А: z=");        // вводим координату Z для точки А
 int Az = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координаты для точки B: х=");
+Console.WriteLine("Введите координаты для точки B: х=");        // вводим координату X для точки B
 int Bx = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координаты для точки B: y=");
+Console.WriteLine("Введите координаты для точки B: y=");        // вводим координату У для точки B
 int By = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координаты для точки B: z=");
+Console.WriteLine("Введите координаты для точки B: z=");        // вводим координату Z для точки B
 int Bz = Convert.ToInt32(Console.ReadLine());
-double S = Math.Sqrt(((Bx-Ax)*(Bx-Ax))+((By-Ay)*(By-Ay))+((Bz-Az)*(Bz-Az)));
-S = Math.Round(S,2);
-Console.WriteLine("Расстояние между точками А и В равно:{0}", S);
+double S = Math.Sqrt(((Bx-Ax)*(Bx-Ax))+((By-Ay)*(By-Ay))+((Bz-Az)*(Bz-Az)));        // расчет расстояния между точками А и В в в 3D пространстве
+S = Math.Round(S,2);                                                                // округляем до сотых значение 
+Console.WriteLine("Расстояние между точками А и В равно:{0}", S);                   // выводим результат
