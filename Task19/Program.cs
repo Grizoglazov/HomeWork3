@@ -6,14 +6,18 @@
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number >= 10000 && number <= 99999)
+if (number > 9999 && number <= 99999)
 {
     int digit = number / 10000;
     int balance = number % 10;
     if (digit == balance)
     {
-        int digit2 = (number%10000)/1000;
-        int balance2 = (digit2%100)/10;
+        int digit2 = number;
+        digit2%=10000;
+        digit2 /=1000;
+        int balance2 = digit2;
+        balance2%=100;
+        balance2 /=10; 
         if (digit2 == balance2)
         {
              Console.WriteLine("Число {} является палиндромом", number);
