@@ -4,7 +4,7 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.WriteLine("Введите число");
+Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number >= 10000 && number <= 99999)
 {

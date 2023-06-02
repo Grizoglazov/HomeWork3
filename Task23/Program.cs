@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿/*Задача 23
+Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+3 -> 1, 8, 27
+5 -> 1, 8, 27, 64, 125*/
+
+Console.WriteLine("Введите число: ");
+int N = Convert.ToInt32(Console.ReadLine());      // создаем максимальное искомое значение по условию это N
+int Min = 1;                                        // значение 1 дано по условию задачи
+while (Min <= N)                                  // создаем перебор всех чисел от 1 до N
+{
+    int Result = Min*Min*Min;                      // находим куб числа 
+    Console.Write(Result + ", ");                          // выводим результат в одну строку
+    Min++;                                          // прибавляем на 1
+}
+Console.WriteLine("Конец программы!!");              
